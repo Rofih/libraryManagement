@@ -4,33 +4,81 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37e276bb-6bfc-4e22-aba5-5abe1fbea046" name="Changes" comment="" />
+    <list default="true" id="37e276bb-6bfc-4e22-aba5-5abe1fbea046" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/Borrowing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/enums/Genre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/enums/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/controllers/hello.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/hello.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/hello.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Rofih&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Rofih/libraryManagement.git&quot;,
+    &quot;accountId&quot;: &quot;37c59f45-726d-4445-9e05-bd5d88a86ff0&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2ukqFpOUAZ2K96VsIVeTI00T7yv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/DELL USER/Desktop/LibraryManagementSystem/src/main/java/com/byteBuilder/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL USER/Desktop/LibraryManagementSystem/src/main/java/com/rofihLibrary/libraryManagement/utils&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/DELL USER/Desktop/LibraryManagementSystem/src/main/java/com/byteBuilder/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL USER\Desktop\LibraryManagementSystem\src\main\java\com\rofihLibrary\libraryManagement\utils" />
+      <recent name="C:\Users\DELL USER\Desktop\LibraryManagementSystem\src\main\java\com\rofihLibrary\libraryManagement\services" />
+      <recent name="C:\Users\DELL USER\Desktop\LibraryManagementSystem\src\main\java\com\rofihLibrary\libraryManagement\dtos" />
+      <recent name="C:\Users\DELL USER\Desktop\LibraryManagementSystem\src\main\java\com\rofihLibrary\libraryManagement\data\repositries" />
+      <recent name="C:\Users\DELL USER\Desktop\LibraryManagementSystem\src\main\java\com\rofihLibrary\libraryManagement\data\models" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -47,15 +95,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742802826278</updated>
-      <workItem from="1742802827740" duration="20000" />
+      <workItem from="1742802827740" duration="97000" />
+      <workItem from="1742802978828" duration="106000" />
+      <workItem from="1742803100109" duration="75000" />
+      <workItem from="1742803195688" duration="2263000" />
+      <workItem from="1742805792092" duration="39000" />
+      <workItem from="1742805844385" duration="15000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/byteBuilder/Main.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/rofihLibrary/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
