@@ -5,18 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37e276bb-6bfc-4e22-aba5-5abe1fbea046" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/Borrowing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/enums/Genre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/enums/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/BookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/enums/BookStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/dtos/request/BookRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/dtos/request/UserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/dtos/response/BookResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/dtos/response/UserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/dtos/response/ViewBookResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/utils/AlreadyExist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/utils/BookMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/utils/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/controllers/hello.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/hello.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/hello.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/Borrowing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/Borrowing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/dtos/hello.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/utils/hello.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +33,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Exception" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -101,6 +110,13 @@
       <workItem from="1742803195688" duration="2263000" />
       <workItem from="1742805792092" duration="39000" />
       <workItem from="1742805844385" duration="15000" />
+      <workItem from="1742805878672" duration="1135000" />
+      <workItem from="1742807117279" duration="22000" />
+      <workItem from="1742807155518" duration="2855000" />
+      <workItem from="1742810092726" duration="212000" />
+      <workItem from="1742810352110" duration="7936000" />
+      <workItem from="1742819273543" duration="165000" />
+      <workItem from="1742819463744" duration="114000" />
     </task>
     <servers />
   </component>
