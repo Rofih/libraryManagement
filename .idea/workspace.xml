@@ -5,25 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37e276bb-6bfc-4e22-aba5-5abe1fbea046" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/dtos/request/RentRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/dtos/response/RentResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/utils/BookHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/utils/BorrowMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/rofihLibrary/libraryManagement/services/BookServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/rofihLibrary/libraryManagement/services/UserServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/controllers/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/enums/BorrowStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/rofihLibrary/libraryManagement/services/BorrowingServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/enums/BookStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/enums/BookStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/Borrowing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/models/Borrowing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/BorrowingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/BorrowingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/dtos/response/BookResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/dtos/response/BookResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/BookServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/BookServiceInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/BorrowingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/BorrowingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/UserServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/UserServiceInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,34 +53,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.BookServiceImplTest.test_That_I_Can_Add_Book.executor": "Debug",
-    "JUnit.BookServiceImplTest.test_That_I_Can_Delete_Book.executor": "Run",
-    "JUnit.BookServiceImplTest.test_That_I_Can_Update_Book.executor": "Debug",
-    "JUnit.UserServiceImplTest.executor": "Run",
-    "Maven.LibraryManagementSystem [clean].executor": "Run",
-    "Maven.LibraryManagementSystem [compile].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Main.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/DELL USER/Desktop/LibraryManagementSystem",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/DELL USER/Desktop/LibraryManagementSystem/src/main/java/com/byteBuilder/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.BookServiceImplTest.test_That_I_Can_Add_Book.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.BookServiceImplTest.test_That_I_Can_Delete_Book.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BookServiceImplTest.test_That_I_Can_Update_Book.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.UserServiceImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.LibraryManagementSystem [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.LibraryManagementSystem [compile].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Main.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL USER/Desktop/LibraryManagementSystem&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/DELL USER/Desktop/LibraryManagementSystem/src/main/java/com/byteBuilder/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\DELL USER\Desktop\LibraryManagementSystem\src\main\java\com\rofihLibrary\libraryManagement\utils" />
@@ -224,7 +212,8 @@
       <workItem from="1742810352110" duration="7936000" />
       <workItem from="1742819273543" duration="165000" />
       <workItem from="1742819463744" duration="114000" />
-      <workItem from="1742826489390" duration="17749000" />
+      <workItem from="1742826489390" duration="28139000" />
+      <workItem from="1742914411069" duration="655000" />
     </task>
     <servers />
   </component>
