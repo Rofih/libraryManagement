@@ -19,17 +19,17 @@ public class UserController {
     @Autowired
     public UserServiceInterface userServiceInterface;
 
-    @PostMapping("/create_user")
+    @PostMapping("/user/create")
     public UserResponse createUser(@RequestBody UserRequest userRequest){
         return userServiceInterface.registerUser(userRequest);
     }
 
-    @PostMapping("/log_in")
+    @PostMapping("/user/login")
     public UserResponse logIn(@RequestBody UserRequest userRequest){
         return userServiceInterface.loginUser(userRequest);
     }
 
-    @PostMapping("/get_users/{role}")
+    @PostMapping("/user/get_by_role/{role}")
     public List<User>getUsersByRole(@PathVariable("role") Role role){
         return userServiceInterface.getUserByRole(role);
     }

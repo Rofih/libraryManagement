@@ -3,21 +3,15 @@ package com.rofihLibrary.libraryManagement.services;
 import static org.junit.jupiter.api.Assertions.*;
 
 import com.rofihLibrary.libraryManagement.utils.AlreadyExist;
-import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Import;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import com.rofihLibrary.libraryManagement.data.models.User;
 import com.rofihLibrary.libraryManagement.dtos.request.UserRequest;
 import com.rofihLibrary.libraryManagement.dtos.response.UserResponse;
-import com.rofihLibrary.libraryManagement.services.UserServiceImpl;
 import com.rofihLibrary.libraryManagement.data.repositries.UserRepository;
-import org.springframework.test.context.ActiveProfiles;
+
 
 
 @SpringBootTest
@@ -69,7 +63,7 @@ public class UserServiceImplTest {
         userRequest2.setPassword("anotherpassword");
 
         // When
-        Exception exception = assertThrows(AlreadyExist.class, () -> {
+        Exception exception = assertThrows(AlreadyExist.class, () ->      {
             userService.registerUser(userRequest2);
         });
 

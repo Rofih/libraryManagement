@@ -7,6 +7,8 @@ import com.rofihLibrary.libraryManagement.data.models.enums.BookStatus;
 import com.rofihLibrary.libraryManagement.data.models.enums.BorrowStatus;
 import com.rofihLibrary.libraryManagement.data.repositries.BookRepository;
 import com.rofihLibrary.libraryManagement.data.repositries.BorrowingRepository;
+import com.rofihLibrary.libraryManagement.data.repositries.UserRepository;
+import com.rofihLibrary.libraryManagement.dtos.request.BorrowRequest;
 import com.rofihLibrary.libraryManagement.dtos.request.RentRequest;
 import com.rofihLibrary.libraryManagement.dtos.response.RentResponse;
 import com.rofihLibrary.libraryManagement.utils.BorrowMapper;
@@ -26,7 +28,12 @@ public class BorrowingServiceImpl implements BorrowingServiceInterface {
     @Autowired
     public BookRepository bookRepo;
 
-    public RentResponse borrowBook(RentRequest rentRequest) {
+    @Autowired
+    public UserRepository userRepository;
+
+    @Override
+    public RentResponse borrowBook(BorrowRequest borrowRequest) {
+        RentRequest rentRequest = mapRentResponse(borrowRequest);
         if (hasActiveBorrowing(rentRequest.getUser())) {
             throw new IllegalArgumentException("User already has an active borrowing.");
         }
@@ -75,7 +82,9 @@ public class BorrowingServiceImpl implements BorrowingServiceInterface {
         return false;
     }
 
-    public RentResponse updateBorrowedBookStatus(RentRequest rentRequest) {
+    @Override
+    public RentResponse updateBorrowedBookStatus(BorrowRequest borrowRequest) {
+        RentRequest rentRequest = mapRentResponse(borrowRequest);
         Book book = rentRequest.getBook();
         Optional<Borrowing> optionalBorrowing = borrowingRepo.findBorrowingByBook(book);
 
@@ -91,5 +100,14 @@ public class BorrowingServiceImpl implements BorrowingServiceInterface {
         } else {
             throw new IllegalArgumentException("Borrowing record not found for this book.");
         }
+    }
+
+    public  RentRequest mapRentResponse(BorrowRequest borrowRequest){
+        RentRequest rentRequest = new RentRequest();
+        rentRequest.setBorrowDate(LocalDateTime.now());
+        rentRequest.setBook(bookRepo.findBookByAuthorAndTitle(borrowRequest.getBookAuthor(), borrowRequest.getBookName()).orElse(null));
+        rentRequest.setBorrowDate(borrowRequest.getReturnDate());
+        rentRequest.setUser(userRepository.findUserByUsername(borrowRequest.getUserName()).orElse(null));
+        return rentRequest;
     }
 }

@@ -25,15 +25,25 @@ public class UserServiceImpl implements UserServiceInterface {
     @Autowired
     private BookRepository bookRepository;
 
+
+
     public UserResponse registerUser(UserRequest userRequest) {
         if (!isValidUserRequest(userRequest)) {
-            throw new IllegalArgumentException("Invalid user request.  Please check your email and password.");
+            UserResponse response = new UserResponse();
+            response.setMessage("Haa! Please make sure your email and password dey okay.");
+            return response;
         }
+
+//        User newUser = UserMapper.mapUser(userRequest);
+//        String hashedPassword = passwordEncoder.encode(newUser.getPassword());
+//        newUser.setPassword(hashedPassword);
+
 
         User newUser = UserMapper.mapUser(userRequest);
         UserResponse newUserResponse = UserMapper.mapUserResponse(newUser);
         if (!userRepository.existsByEmail(userRequest.getEmail())) {
             userRepository.save(newUser);
+            newUserResponse.setMessage("your registered successfully");
             return newUserResponse;
         } else {
             throw new AlreadyExist("User already exists");

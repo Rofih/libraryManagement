@@ -19,7 +19,7 @@ public class UserMapper {
         UserResponse userResponse = new UserResponse();
         userResponse.setUserId(newUser.getUserId());
         userResponse.setUserName(newUser.getUsername());
-        userResponse.setMessage("user registered successfully");
+//        userResponse.setMessage("user registered successfully");
         return userResponse;
     }
 }
