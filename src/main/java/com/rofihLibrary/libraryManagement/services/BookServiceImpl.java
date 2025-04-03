@@ -4,6 +4,7 @@ import com.rofihLibrary.libraryManagement.data.models.Book;
 import com.rofihLibrary.libraryManagement.data.models.enums.BookStatus;
 import com.rofihLibrary.libraryManagement.data.repositries.BookRepository;
 import com.rofihLibrary.libraryManagement.dtos.request.BookRequest;
+import com.rofihLibrary.libraryManagement.dtos.request.DeleteRequest;
 import com.rofihLibrary.libraryManagement.dtos.response.BookResponse;
 import com.rofihLibrary.libraryManagement.utils.AlreadyExist;
 import com.rofihLibrary.libraryManagement.utils.BookMapper;
@@ -65,18 +66,21 @@ public class BookServiceImpl implements BookServiceInterface{
             Book newBook = BookMapper.mapBook(bookRequest);
             newBook.setBookId(foundBook.getBookId());
             bookRepository.save(newBook);
-            return BookMapper.mapBookResponse(newBook);
+            BookResponse bookResponse = BookMapper.mapBookResponse(newBook);
+            bookResponse.setMessage("Successfully updated the book.");
+            return bookResponse;
         } else {
             throw new IllegalArgumentException("Book not found");
         }
     }
 
     @Override
-    public BookResponse deleteBook(BookRequest bookRequest) {
-        if (isValidBookRequest(bookRequest)) {
-            throw new IllegalArgumentException("Invalid book request. Please check the title and author.");
-        }
-        Optional<Book> foundBook = bookRepository.findBookByAuthorAndTitle(bookRequest.getAuthor(), bookRequest.getTitle());
+    public BookResponse deleteBook(DeleteRequest deleteRequest) {
+//        if (isValidBookRequest(bookRequest)) {
+//            throw new IllegalArgumentException("Invalid book request. Please check the title and author.");
+//        }
+
+        Optional<Book> foundBook = bookRepository.findBookByAuthorAndTitle(deleteRequest.getAuthor(), deleteRequest.getBookName());
         if (foundBook.isPresent()) {
             Book newBook = foundBook.get();
             bookRepository.deleteById(newBook.getBookId());

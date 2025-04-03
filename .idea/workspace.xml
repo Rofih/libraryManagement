@@ -5,17 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37e276bb-6bfc-4e22-aba5-5abe1fbea046" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/controllers/BorrowingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/dtos/request/BorrowRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/dtos/request/DeleteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/filters/JwtRequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/utils/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/utils/PasswordHashingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/controllers/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/controllers/BorrowingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/controllers/BorrowingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/BorrowingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/BorrowingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/BorrowingServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/BorrowingServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/data/repositries/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/dtos/request/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/dtos/request/UserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/dtos/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/dtos/response/UserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/BookServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/BookServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/BookServiceInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/utils/BorrowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/utils/BorrowMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/utils/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/utils/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/UserServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rofihLibrary/libraryManagement/services/UserServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rofihLibrary/libraryManagement/services/BookServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rofihLibrary/libraryManagement/services/BookServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/rofihLibrary/libraryManagement/services/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rofihLibrary/libraryManagement/services/UserServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +70,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.BookServiceImplTest.executor": "Run",
     "JUnit.BookServiceImplTest.test_That_I_Can_Add_Book.executor": "Debug",
     "JUnit.BookServiceImplTest.test_That_I_Can_Delete_Book.executor": "Run",
     "JUnit.BookServiceImplTest.test_That_I_Can_Update_Book.executor": "Debug",
@@ -98,12 +109,16 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL USER\Desktop\LibraryManagementSystem\src\main\resources" />
+      <recent name="C:\Users\DELL USER\Desktop\LibraryManagementSystem" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.rofihLibrary.libraryManagement.services" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BookServiceImplTest.test_That_I_Can_Delete_Book">
-    <configuration name="BookServiceImplTest.test_That_I_Can_Add_Book" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UserServiceImplTest">
+    <configuration name="BookServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibraryManagementSystem" />
       <extension name="coverage">
         <pattern>
@@ -113,8 +128,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.rofihLibrary.libraryManagement.services" />
       <option name="MAIN_CLASS_NAME" value="com.rofihLibrary.libraryManagement.services.BookServiceImplTest" />
-      <option name="METHOD_NAME" value="test_That_I_Can_Add_Book" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserServiceImplTest" />
+        <item itemvalue="Spring Boot.Main" />
+        <item itemvalue="JUnit.BookServiceImplTest" />
         <item itemvalue="JUnit.BookServiceImplTest.test_That_I_Can_Delete_Book" />
         <item itemvalue="JUnit.BookServiceImplTest.test_That_I_Can_Update_Book" />
-        <item itemvalue="JUnit.BookServiceImplTest.test_That_I_Can_Add_Book" />
-        <item itemvalue="Spring Boot.Main" />
-        <item itemvalue="JUnit.UserServiceImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +234,8 @@
       <workItem from="1742819463744" duration="114000" />
       <workItem from="1742826489390" duration="28139000" />
       <workItem from="1742914411069" duration="655000" />
-      <workItem from="1742915091049" duration="9755000" />
+      <workItem from="1742915091049" duration="26785000" />
+      <workItem from="1743062971962" duration="34681000" />
     </task>
     <servers />
   </component>

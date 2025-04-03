@@ -2,6 +2,7 @@ package com.rofihLibrary.libraryManagement.controllers;
 
 import com.rofihLibrary.libraryManagement.data.models.Book;
 import com.rofihLibrary.libraryManagement.dtos.request.BookRequest;
+import com.rofihLibrary.libraryManagement.dtos.request.DeleteRequest;
 import com.rofihLibrary.libraryManagement.dtos.response.BookResponse;
 import com.rofihLibrary.libraryManagement.services.BookServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,22 +19,22 @@ public class BookController {
     @Autowired
     public BookServiceInterface bookServiceInterface;
 
-    @PostMapping("/add_book")
+    @PostMapping("/book/add_book")
     public BookResponse addBook(@RequestBody BookRequest bookRequest){
         return bookServiceInterface.addBook(bookRequest);
     }
 
-    @PostMapping("/update_book")
+    @PostMapping("/book/update_book")
     public BookResponse updateBook(@RequestBody BookRequest bookRequest){
         return bookServiceInterface.updateBook(bookRequest);
     }
 
-    @PostMapping("/delete_book")
-    public BookResponse deleteBook(@RequestBody BookRequest bookRequest){
+    @PostMapping("/book/delete_book")
+    public BookResponse deleteBook(@RequestBody DeleteRequest bookRequest){
         return bookServiceInterface.deleteBook(bookRequest);
     }
 
-    @GetMapping("/view_books")
+    @GetMapping("/book/view_books")
     public List<Book> viewAllBooks(){
         return bookServiceInterface.viewBooks();
     }

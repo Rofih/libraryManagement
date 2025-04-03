@@ -15,12 +15,12 @@ public class BorrowingController {
     @Autowired
     public BorrowingServiceInterface borrowingServiceInterface;
 
-    @PostMapping("/borrow_book")
+    @PostMapping("/rent_books/borrow_book")
     public RentResponse borrowBook(@RequestBody BorrowRequest borrowRequest){
         return borrowingServiceInterface.borrowBook(borrowRequest);
     }
 
-    @PostMapping("/update_status")
+    @PostMapping("/rent_books/update_status")
     public RentResponse updateBorrowStatus(@RequestBody BorrowRequest borrowRequest){
         return borrowingServiceInterface.updateBorrowedBookStatus(borrowRequest);
     }

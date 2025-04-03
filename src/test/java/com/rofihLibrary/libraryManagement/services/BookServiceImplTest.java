@@ -5,6 +5,7 @@ import com.rofihLibrary.libraryManagement.data.models.enums.BookStatus;
 import com.rofihLibrary.libraryManagement.data.models.enums.Genre;
 import com.rofihLibrary.libraryManagement.data.repositries.BookRepository;
 import com.rofihLibrary.libraryManagement.dtos.request.BookRequest;
+import com.rofihLibrary.libraryManagement.dtos.request.DeleteRequest;
 import com.rofihLibrary.libraryManagement.dtos.response.BookResponse;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -89,8 +90,11 @@ class BookServiceImplTest {
         bookRequest.setAbout("About book");
 
         bookServiceImpl.addBook(bookRequest);
+        DeleteRequest deleteRequest = new DeleteRequest();
+        deleteRequest.setBookName("Book Title");
+        deleteRequest.setAuthor("Author");
         //When
-        BookResponse bookResponse = bookServiceImpl.deleteBook(bookRequest);
+        BookResponse bookResponse = bookServiceImpl.deleteBook(deleteRequest);
         //Then
         assertNotNull(bookResponse);
         String expectedMessage = "book safely deleted";

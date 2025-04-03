@@ -13,11 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+
 @RestController("/user")
 public class UserController {
 
     @Autowired
     public UserServiceInterface userServiceInterface;
+
 
     @PostMapping("/user/create")
     public UserResponse createUser(@RequestBody UserRequest userRequest){
