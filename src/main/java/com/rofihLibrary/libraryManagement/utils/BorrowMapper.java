@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 public class BorrowMapper {
 
 
-    public static Borrowing mapBorrow(RentRequest rentRequest) {
+    public static Borrowing mapBorrow( RentRequest rentRequest) {
         Borrowing borrowing = new Borrowing();
         borrowing.setBorrowDate(rentRequest.getBorrowDate());
         borrowing.setBook(rentRequest.getBook());

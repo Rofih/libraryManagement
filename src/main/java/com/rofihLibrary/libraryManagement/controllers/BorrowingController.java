@@ -2,13 +2,16 @@ package com.rofihLibrary.libraryManagement.controllers;
 
 import com.rofihLibrary.libraryManagement.data.repositries.BorrowingRepository;
 import com.rofihLibrary.libraryManagement.dtos.request.BorrowRequest;
+import com.rofihLibrary.libraryManagement.dtos.request.RentTwoRequest;
 import com.rofihLibrary.libraryManagement.dtos.response.RentResponse;
 import com.rofihLibrary.libraryManagement.services.BorrowingServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin(origins = "http://localhost:5173" )
 @RestController("/rent_books")
 public class BorrowingController {
 
@@ -16,7 +19,8 @@ public class BorrowingController {
     public BorrowingServiceInterface borrowingServiceInterface;
 
     @PostMapping("/rent_books/borrow_book")
-    public RentResponse borrowBook(@RequestBody BorrowRequest borrowRequest){
+    public RentResponse borrowBook(@RequestBody RentTwoRequest borrowRequest){
+        System.out.println(borrowRequest);
         return borrowingServiceInterface.borrowBook(borrowRequest);
     }
 

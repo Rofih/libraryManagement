@@ -2,6 +2,7 @@ package com.rofihLibrary.libraryManagement.services;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import com.rofihLibrary.libraryManagement.dtos.request.LoginRequest;
 import com.rofihLibrary.libraryManagement.utils.AlreadyExist;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -80,7 +81,7 @@ public class UserServiceImplTest {
         registerRequest.setPassword("loginpassword");
         userService.registerUser(registerRequest);
 
-        UserRequest loginRequest = new UserRequest();
+        LoginRequest loginRequest = new LoginRequest();
         loginRequest.setEmail("login@example.com");
         loginRequest.setPassword("loginpassword");
 
@@ -100,7 +101,7 @@ public class UserServiceImplTest {
         registerRequest.setPassword("correctpassword");
         userService.registerUser(registerRequest);
 
-        UserRequest loginRequest = new UserRequest();
+        LoginRequest loginRequest = new LoginRequest();
         loginRequest.setEmail("loginfail@example.com");
         loginRequest.setPassword("wrongpassword");
 
@@ -116,7 +117,7 @@ public class UserServiceImplTest {
     @Test
     void testLoginUser_userNotFound() {
         //Given
-        UserRequest loginRequest = new UserRequest();
+        LoginRequest loginRequest = new LoginRequest();
         loginRequest.setEmail("doesnotexist@example.com");
         loginRequest.setPassword("anyPassword");
 

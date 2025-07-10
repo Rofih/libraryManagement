@@ -1,6 +1,7 @@
 package com.rofihLibrary.libraryManagement.utils;
 
 import com.rofihLibrary.libraryManagement.data.models.User;
+import com.rofihLibrary.libraryManagement.dtos.request.LoginRequest;
 import com.rofihLibrary.libraryManagement.dtos.request.UserRequest;
 import com.rofihLibrary.libraryManagement.dtos.response.UserResponse;
 
@@ -21,5 +22,12 @@ public class UserMapper {
         userResponse.setUserName(newUser.getUsername());
 //        userResponse.setMessage("user registered successfully");
         return userResponse;
+    }
+
+    public static UserRequest mapUserRequest(LoginRequest loginRequest) {
+        UserRequest userRequest = new UserRequest();
+        userRequest.setEmail(loginRequest.getEmail());
+        userRequest.setPassword(loginRequest.getPassword());
+        return userRequest;
     }
 }

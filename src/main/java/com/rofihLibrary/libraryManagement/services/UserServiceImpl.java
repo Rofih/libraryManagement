@@ -4,6 +4,7 @@ import com.rofihLibrary.libraryManagement.data.models.User;
 import com.rofihLibrary.libraryManagement.data.models.enums.Role;
 import com.rofihLibrary.libraryManagement.data.repositries.BookRepository;
 import com.rofihLibrary.libraryManagement.data.repositries.UserRepository;
+import com.rofihLibrary.libraryManagement.dtos.request.LoginRequest;
 import com.rofihLibrary.libraryManagement.dtos.request.UserRequest;
 import com.rofihLibrary.libraryManagement.dtos.response.UserResponse;
 import com.rofihLibrary.libraryManagement.utils.AlreadyExist;
@@ -67,19 +68,26 @@ public class UserServiceImpl implements UserServiceInterface {
         UserResponse newUserResponse = UserMapper.mapUserResponse(newUser);
         if (!userRepository.existsByEmail(userRequest.getEmail())) {
             userRepository.save(newUser);
+
             newUserResponse.setMessage("your registered successfully");
+            newUserResponse.setUserId(newUser.getUserId());
             return newUserResponse;
         } else {
             throw new AlreadyExist("User already exists");
         }
     }
     @Override
-    public UserResponse loginUser(UserRequest userRequest) {
+    public UserResponse loginUser(LoginRequest loginRequest) {
+        UserRequest userRequest = UserMapper.mapUserRequest(loginRequest);
+        Optional<User> userOptional = userRepository.findByEmail(userRequest.getEmail());
+//        userOptional.ifPresent(user -> {
+//
+//        });
         if (!isValidUserRequest(userRequest)) {
             throw new IllegalArgumentException("Invalid user request.  Please check your email and password.");
         }
 
-        Optional<User> userOptional = userRepository.findByEmail(userRequest.getEmail());
+
 
         if (userOptional.isPresent()) {
             User foundUser = userOptional.get();

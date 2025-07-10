@@ -10,12 +10,14 @@ import com.rofihLibrary.libraryManagement.data.repositries.BorrowingRepository;
 import com.rofihLibrary.libraryManagement.data.repositries.UserRepository;
 import com.rofihLibrary.libraryManagement.dtos.request.BorrowRequest;
 import com.rofihLibrary.libraryManagement.dtos.request.RentRequest;
+import com.rofihLibrary.libraryManagement.dtos.request.RentTwoRequest;
 import com.rofihLibrary.libraryManagement.dtos.response.RentResponse;
 import com.rofihLibrary.libraryManagement.utils.BorrowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,8 +34,12 @@ public class BorrowingServiceImpl implements BorrowingServiceInterface {
     public UserRepository userRepository;
 
     @Override
-    public RentResponse borrowBook(BorrowRequest borrowRequest) {
+    public RentResponse borrowBook(RentTwoRequest rentTwoRequest) {
+//        System.out.println(rentTwoRequest);
+        BorrowRequest borrowRequest = mapBorrowRequest(rentTwoRequest);
+        System.out.println(borrowRequest);
         RentRequest rentRequest = mapRentResponse(borrowRequest);
+        System.out.println(rentRequest + "check");
         if (hasActiveBorrowing(rentRequest.getUser())) {
             throw new IllegalArgumentException("User already has an active borrowing.");
         }
@@ -55,9 +61,20 @@ public class BorrowingServiceImpl implements BorrowingServiceInterface {
         return null;
     }
 
+    private BorrowRequest mapBorrowRequest(RentTwoRequest rentTwoRequest) {
+        BorrowRequest borrowRequest = new BorrowRequest();
+        borrowRequest.setBookAuthor(rentTwoRequest.getBookAuthor());
+        borrowRequest.setTitle(rentTwoRequest.getBookName());
+        borrowRequest.setUserName(rentTwoRequest.getUserName());
+        borrowRequest.setReturnDate(formatDate(rentTwoRequest.getReturnDate()));
+        return borrowRequest;
+    }
+
     private BookStatus bookStatus(RentRequest rentRequest) {
+//        System.out.println(rentRequest);
         Book newBook = rentRequest.getBook();
-        Book foundBook = bookRepo.findBookByAuthorAndTitle(newBook.getAuthor(), newBook.getTitle()).orElse(null);
+//        System.out.println(newBook + "the book");
+        Book foundBook = bookRepo.findBookByAuthorAndTitle(newBook.getAuthor(),newBook.getTitle()).orElse(null);
         if (foundBook != null) {
             return foundBook.getStatus();
         } else {
@@ -103,11 +120,18 @@ public class BorrowingServiceImpl implements BorrowingServiceInterface {
     }
 
     public  RentRequest mapRentResponse(BorrowRequest borrowRequest){
+        System.out.println(borrowRequest + "mapper");
         RentRequest rentRequest = new RentRequest();
         rentRequest.setBorrowDate(LocalDateTime.now());
-        rentRequest.setBook(bookRepo.findBookByAuthorAndTitle(borrowRequest.getBookAuthor(), borrowRequest.getBookName()).orElse(null));
+        rentRequest.setBook(bookRepo.findBookByAuthorAndTitle(borrowRequest.getBookAuthor(), borrowRequest.getTitle()).orElse(null));
+        System.out.println(bookRepo.findBookByAuthorAndTitle(borrowRequest.getBookAuthor(),borrowRequest.getTitle()).orElse(null) + "check2");
         rentRequest.setBorrowDate(borrowRequest.getReturnDate());
         rentRequest.setUser(userRepository.findUserByUsername(borrowRequest.getUserName()).orElse(null));
         return rentRequest;
+    }
+
+    private LocalDateTime formatDate(String date) {
+        DateTimeFormatter formatter= DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
+        return LocalDateTime.parse(date, formatter);
     }
 }

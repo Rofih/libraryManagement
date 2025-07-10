@@ -14,4 +14,7 @@ public interface BorrowingRepository extends MongoRepository<Borrowing, String> 
     Optional<Borrowing> findBorrowingByBook(Book book);
 
     List<Borrowing> findByUser(User user);
+
+    Optional<Borrowing> findBorrowingByUser(User foundUser);
+
 }
