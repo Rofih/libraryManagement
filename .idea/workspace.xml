@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37e276bb-6bfc-4e22-aba5-5abe1fbea046" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +43,10 @@
     &quot;accountId&quot;: &quot;37c59f45-726d-4445-9e05-bd5d88a86ff0&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -47,38 +56,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.BookServiceImplTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BookServiceImplTest.test_That_I_Can_Add_Book.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.BookServiceImplTest.test_That_I_Can_Delete_Book.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BookServiceImplTest.test_That_I_Can_Update_Book.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.BorrowingServiceImplTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BorrowingServiceImplTest.test_That_I_Can_Borrow_book.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceImplTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.LibraryManagementSystem [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.LibraryManagementSystem [compile].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Main.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL USER/Desktop/LibraryManagementSystem&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/DELL USER/Desktop/LibraryManagementSystem/src/main/java/com/byteBuilder/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.Dockerfile.executor": "Run",
+    "JUnit.BookServiceImplTest.executor": "Run",
+    "JUnit.BookServiceImplTest.test_That_I_Can_Add_Book.executor": "Debug",
+    "JUnit.BookServiceImplTest.test_That_I_Can_Delete_Book.executor": "Run",
+    "JUnit.BookServiceImplTest.test_That_I_Can_Update_Book.executor": "Debug",
+    "JUnit.BorrowingServiceImplTest.executor": "Run",
+    "JUnit.BorrowingServiceImplTest.test_That_I_Can_Borrow_book.executor": "Run",
+    "JUnit.UserServiceImplTest.executor": "Run",
+    "Maven.LibraryManagementSystem [clean].executor": "Run",
+    "Maven.LibraryManagementSystem [compile].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.Main.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/DELL USER/Desktop/LibraryManagementSystem",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/DELL USER/Desktop/LibraryManagementSystem/src/main/java/com/byteBuilder/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\DELL USER\Desktop\LibraryManagementSystem\src\main\java\com\rofihLibrary\libraryManagement\utils" />
@@ -99,7 +112,7 @@
       <recent name="com.rofihLibrary.libraryManagement.services" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceImplTest">
+  <component name="RunManager" selected="Spring Boot.Main">
     <configuration name="BookServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibraryManagementSystem" />
       <extension name="coverage">
@@ -126,22 +139,6 @@
       <option name="PACKAGE_NAME" value="com.rofihLibrary.libraryManagement.services" />
       <option name="MAIN_CLASS_NAME" value="com.rofihLibrary.libraryManagement.services.BorrowingServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BorrowingServiceImplTest.test_That_I_Can_Borrow_book" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LibraryManagementSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.rofihLibrary.libraryManagement.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.rofihLibrary.libraryManagement.services" />
-      <option name="MAIN_CLASS_NAME" value="com.rofihLibrary.libraryManagement.services.BorrowingServiceImplTest" />
-      <option name="METHOD_NAME" value="test_That_I_Can_Borrow_book" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -174,13 +171,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.Main" />
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="JUnit.UserServiceImplTest" />
         <item itemvalue="JUnit.BorrowingServiceImplTest" />
         <item itemvalue="JUnit.BookServiceImplTest" />
-        <item itemvalue="Spring Boot.Main" />
-        <item itemvalue="JUnit.BorrowingServiceImplTest.test_That_I_Can_Borrow_book" />
       </list>
     </recent_temporary>
   </component>
@@ -239,6 +248,7 @@
       <workItem from="1744115987321" duration="9631000" />
       <workItem from="1749414265681" duration="83000" />
       <workItem from="1752143131618" duration="2591000" />
+      <workItem from="1752157936708" duration="19661000" />
     </task>
     <servers />
   </component>

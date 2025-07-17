@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: library
+    ports:
+      - "018:419"
+    environment:
+      - PORT=419
+      - SPRING_DATA_MONGODB_URI=mongodb://localhost:27017/libraryManagement
+    depends_on:
+      - mongo
+    restart: unless-stopped
+
+  mongo:
+    image: mongo:6.0
+    container_name: library-mongo
+    ports:
+      - "14450:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+
+volumes:
+  mongo_data:
